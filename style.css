@@ -1,10 +1,11 @@
-/* Reset */
+/* ======== RESET ======== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ======== BODY ======== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #121212;
@@ -12,7 +13,7 @@ body {
     line-height: 1.6;
 }
 
-/* Cabeçalho */
+/* ======== HEADER ======== */
 header {
     background-color: #1f1f1f;
     padding: 40px 20px;
@@ -27,6 +28,7 @@ header h1 {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 header p {
@@ -39,15 +41,17 @@ header p {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
-/* Conteúdo principal */
+/* ======== MAIN ======== */
 main {
     max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
+/* ======== SECTION ======== */
 section {
     background-color: #1a1a1a;
     padding: 25px;
@@ -55,12 +59,16 @@ section {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
     margin-bottom: 25px;
     border: 1px solid #292929;
-    transition: transform 0.2s ease, background-color 0.3s ease;
+    transition: 
+        transform 0.2s ease, 
+        background-color 0.3s ease, 
+        box-shadow 0.3s ease;
 }
 
 section:hover {
     transform: translateY(-4px);
     background-color: #222;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
 }
 
 section h2 {
@@ -69,11 +77,29 @@ section h2 {
     font-size: 1.6rem;
 }
 
-section p {
-    color: #cccccc;
+section h3 {
+    color: #03dac6;
+    margin: 15px 0 8px;
+    font-size: 1.3rem;
 }
 
-/* Botões Bonitos */
+section p {
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+/* ======== PRE-FORMATADO ======== */
+pre {
+    background-color: #1f1f1f;
+    color: #cccccc;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+    border: 1px solid #292929;
+    line-height: 1.5;
+}
+
+/* ======== BOTÕES ======== */
 .button-container {
     text-align: center;
     margin: 40px 0;
@@ -115,16 +141,17 @@ section p {
     box-shadow: 0 4px 10px rgba(0, 188, 212, 0.4);
 }
 
-/* Rodapé */
+/* ======== FOOTER ======== */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #1f1f1f;
     border-top: 2px solid #292929;
     color: #888;
+    font-size: 0.9rem;
 }
 
-/* Responsivo */
+/* ======== RESPONSIVO ======== */
 @media (max-width: 600px) {
     header h1 {
         font-size: 2rem;
@@ -135,8 +162,17 @@ footer {
         font-size: 1.3rem;
     }
 
+    section h3 {
+        font-size: 1.1rem;
+    }
+
     .cat-gif {
         width: 40px;
         height: 40px;
+    }
+
+    .action-button {
+        font-size: 1rem;
+        padding: 12px 24px;
     }
 }
