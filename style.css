@@ -1,0 +1,142 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1f1f1f;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 2px solid #292929;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #00bcd4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    margin-top: 10px;
+}
+
+.cat-gif {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Conteúdo principal */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    margin-bottom: 25px;
+    border: 1px solid #292929;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-4px);
+    background-color: #222;
+}
+
+section h2 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+section p {
+    color: #cccccc;
+}
+
+/* Botões Bonitos */
+.button-container {
+    text-align: center;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.action-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: linear-gradient(90deg, #00bcd4, #2196f3);
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
+    border: 2px solid transparent;
+    transition: 
+        background 0.4s ease, 
+        transform 0.2s ease, 
+        box-shadow 0.4s ease,
+        border-color 0.3s ease;
+}
+
+.action-button:hover {
+    background: linear-gradient(90deg, #2196f3, #00bcd4);
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 188, 212, 0.6);
+    border-color: #00bcd4;
+}
+
+.action-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 10px rgba(0, 188, 212, 0.4);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-top: 2px solid #292929;
+    color: #888;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+        flex-direction: column;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+
+    .cat-gif {
+        width: 40px;
+        height: 40px;
+    }
+}
