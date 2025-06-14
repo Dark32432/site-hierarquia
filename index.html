@@ -139,9 +139,64 @@
         </section>
     </main>
 
+    <!-- TELA DOS PONTOS DE PATENTES -->
+    <main id="pontos" style="display: none;">
+        <section>
+            <h2>Hierarquia Militar</h2>
+            <p>Confira abaixo a hierarquia completa com seus requisitos.</p>
+
+            <h3>Siglas e Patentes</h3>
+            <pre>
+[Mar] Marechal
+[GNE] General de Exército
+[GND] General de Divisão
+[GNB] General de Brigada
+[Cm] Coronel
+[TN-C] Tenente-Coronel
+[Major] Major
+[Cpt] Capitão
+[1-Tnt] 1º Tenente
+[2-Tnt] 2º Tenente
+[AAO] Aspirante a Oficial
+[Sub-Tnt] Sub-Tenente
+[1-Sgt] 1º Sargento
+[2-Sgt] 2º Sargento
+[3-Sgt] 3º Sargento
+[Cb] Cabo
+[Sd-1CI] Soldado de 1ª Classe
+[Sd-2CI] Soldado de 2ª Classe
+[Rc] Recruta
+            </pre>
+
+            <h3>Requisitos para Promoção</h3>
+            <pre>
+[Mar] Marechal – 100 Pontos + 1 Prova
+[GNE] General de Exército – 100 Pontos + 1 Prova
+[GND] General de Divisão – 100 Pontos + 1 Prova
+[GNB] General de Brigada – 100 Pontos + 1 Prova
+[Cm] Coronel – 70 Pontos
+[TN-C] Tenente-Coronel – 70 Pontos
+[Major] Major – 70 Pontos + 1 Prova
+[Cpt] Capitão – 50 Pontos + 1 Prova
+[1-Tnt] 1º Tenente – 30 Pontos
+[2-Tnt] 2º Tenente – 30 Pontos
+[AAO] Aspirante a Oficial – 30 Pontos + 1 Prova
+[Sub-Tnt] Sub-Tenente – 15 Pontos
+[1-Sgt] 1º Sargento – 15 Pontos
+[2-Sgt] 2º Sargento – 15 Pontos
+[3-Sgt] 3º Sargento – 15 Pontos
+[Cb] Cabo – 15 Pontos + 1 Prova
+[Sd-1CI] Soldado de 1ª Classe – 5 Pontos
+[Sd-2CI] Soldado de 2ª Classe – 5 Pontos
+[Rc] Recruta – 0 Pontos
+            </pre>
+        </section>
+    </main>
+
     <!-- BOTÕES -->
     <div class="button-container">
         <a href="#" class="action-button" onclick="mostrarMinistros()">⚡ Ver Poderes das Patentes</a>
+        <a href="#" class="action-button" onclick="mostrarPontos()">⭐ Pontos de Patentes</a>
         <a href="#" class="action-button" onclick="voltar()">↩️ Voltar</a>
     </div>
 
@@ -154,19 +209,25 @@
         function mostrarMinistros() {
             document.getElementById('patentes').style.display = 'none';
             document.getElementById('ministros').style.display = 'block';
-            document.getElementById('page-title').innerHTML = `
-                Ministros E Marechais
-                <img src="https://media.tenor.com/ZkC_7k1O3fUAAAAi/cat-jam-vibing.gif" alt="Gatinho dançando" class="cat-gif">
-            `;
+            document.getElementById('pontos').style.display = 'none';
+            document.getElementById('page-title').innerHTML = 
+                'Ministros e Marechais <img src="https://media.tenor.com/ZkC_7k1O3fUAAAAi/cat-jam-vibing.gif" alt="Gatinho dançando" class="cat-gif">';
+        }
+
+        function mostrarPontos() {
+            document.getElementById('patentes').style.display = 'none';
+            document.getElementById('ministros').style.display = 'none';
+            document.getElementById('pontos').style.display = 'block';
+            document.getElementById('page-title').innerHTML = 
+                'Pontos de Patentes <img src="https://media.tenor.com/ZkC_7k1O3fUAAAAi/cat-jam-vibing.gif" alt="Gatinho dançando" class="cat-gif">';
         }
 
         function voltar() {
             document.getElementById('ministros').style.display = 'none';
             document.getElementById('patentes').style.display = 'block';
-            document.getElementById('page-title').innerHTML = `
-                Funções das Patentes
-                <img src="https://media.tenor.com/ZkC_7k1O3fUAAAAi/cat-jam-vibing.gif" alt="Gatinho dançando" class="cat-gif">
-            `;
+            document.getElementById('pontos').style.display = 'none';
+            document.getElementById('page-title').innerHTML = 
+                'Funções das Patentes <img src="https://media.tenor.com/ZkC_7k1O3fUAAAAi/cat-jam-vibing.gif" alt="Gatinho dançando" class="cat-gif">';
         }
     </script>
 </body>
